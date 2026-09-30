@@ -23,5 +23,6 @@
       "js": ["data.js", "content.js"],
       "run_at": "document_idle"
     }
-  ]
+  ],
+  "homepage_url": "https://github.com/tmpluto/tanki-online-filter-maps"
 }
