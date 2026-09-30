@@ -2,10 +2,15 @@
   "manifest_version": 3,
   "name": "Tanki Online - Filter Maps",
   "version": "1.0.0",
+  "permissions": ["storage"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
   "content_scripts": [
     {
       "matches": ["https://tankionline.com/play/*"],
-      "js": ["content.js"],
+      "js": ["data.js", "content.js"],
       "run_at": "document_idle"
     }
   ]
