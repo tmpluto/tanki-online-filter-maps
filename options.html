@@ -17,6 +17,7 @@
       --accent-soft: #e3eff6;
       --danger: #d63a3a;
       --danger-soft: #fbeaea;
+      --warn: #c58a0a;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -30,6 +31,7 @@
         --accent-soft: #22323d;
         --danger: #ff6b6b;
         --danger-soft: #3a2326;
+        --warn: #f5c542;
       }
     }
     * { box-sizing: border-box; }
@@ -46,6 +48,12 @@
     h1 .tr { display: block; font-size: 16px; font-weight: 400; margin-top: 2px; }
     p.sub { margin: 0 0 20px; color: var(--muted); }
     p.sub .tr { display: block; }
+    .note {
+      margin: 0 0 8px; padding: 10px 14px; font-size: 13px; color: var(--text);
+      background: var(--panel); border: 1px solid var(--line);
+      border-left: 4px solid var(--warn); border-radius: 6px;
+    }
+    .note .tr { display: block; margin-top: 4px; }
     /* Russian translation of UI text, dimmer than the English */
     .tr { color: var(--dim); }
 
@@ -113,6 +121,13 @@
     </header>
     <p class="sub">Selected maps will be dimmed and shrunk in the battle list.
       <span class="tr">Выбранные карты будут затемнены и уменьшены в списке боёв.</span>
+    </p>
+
+    <p class="note">
+      Battles are matched by name: a battle is filtered if its name contains the name of a selected map.
+      Battles with custom names that don't include a map name can't be detected.
+      <span class="tr">Бои определяются по названию: бой скрывается, если его название содержит название выбранной карты.
+      Бои с пользовательскими названиями, не содержащими названия карты, определить невозможно.</span>
     </p>
 
     <div class="bar">
